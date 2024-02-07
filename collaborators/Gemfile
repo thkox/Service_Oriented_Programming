@@ -44,6 +44,8 @@ gem 'sass-rails', '~> 6.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'jquery-rails'
 
+# Use devise for user authentication
+gem 'devise'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
