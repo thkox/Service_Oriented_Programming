@@ -8,4 +8,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root to: 'pages#index'
+
+  # Adding custom route for login
+  devise_scope :user do
+    get 'login', to: 'devise/sessions#new'
+  end
 end
