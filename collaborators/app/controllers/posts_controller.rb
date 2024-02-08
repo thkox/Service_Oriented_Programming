@@ -46,4 +46,5 @@ class PostsController < ApplicationController
         else
         end
     end
+    
 end
