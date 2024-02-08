@@ -50,6 +50,9 @@ gem 'devise'
 # Use bootstrap_form for forms
 gem 'bootstrap_form'
 
+# Use faker for seed data
+gem 'faker'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
