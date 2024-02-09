@@ -3,6 +3,7 @@ require_relative 'navigation_helper'
 module ApplicationHelper
   include NavigationHelper
   include PostsHelper
+  include Private::MessagesHelper
   include Private::ConversationsHelper
 
   def private_conversations_windows
