@@ -1,17 +1,16 @@
 // finds a conversation in the DOM
 function findConv(conversation_id, type) {
     // if a current conversation is opened in the messenger
-    var messenger_conversation = $('body .conversation');
+    const messenger_conversation = $('body .conversation');
     if (messenger_conversation.length) {
         // conversation is opened in the messenger
         return messenger_conversation;
-    } else { 
+    } else {
         // conversation is opened in a popup window
-        var data_attr = "[data-" + type + "conversation-id='" + 
-                         conversation_id + 
-                         "']";
-        var conversation = $('body').find(data_attr);
-        return conversation;
+        const data_attr = "[data-" + type + "conversation-id='" +
+            conversation_id +
+            "']";
+        return $('body').find(data_attr);
     }
 }
 
@@ -22,12 +21,12 @@ function ConvRendered(conversation_id, type) {
         // conversation is opened in the messenger
         // so it automatically means that is visible
         return true;
-    } else { 
+    } else {
         // conversation is opened in a popup window
-        var data_attr = "[data-" + type + "conversation-id='" + 
-                         conversation_id + 
-                         "']";
-        var conversation = $('body').find(data_attr);
+        const data_attr = "[data-" + type + "conversation-id='" +
+            conversation_id +
+            "']";
+        const conversation = $('body').find(data_attr);
         return conversation.is(':visible');
     }
 }
@@ -41,9 +40,6 @@ function ConvMessagesVisiblity(conversation) {
     } else {
         // conversation is opened in a popup window
         // check if the window is collapsed or expanded
-        var visibility = conversation
-                             .find('.panel-body')
-                             .is(':visible');
-        return visibility;
+        return conversation.find('.panel-body').is(':visible');
     }
 }
