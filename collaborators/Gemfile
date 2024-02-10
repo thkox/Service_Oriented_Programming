@@ -50,6 +50,9 @@ gem 'jquery-rails'
 # Use devise for user authentication
 gem 'devise'
 
+gem 'gon'
+gem 'rabl-rails'
+
 # Use bootstrap_form for forms
 gem 'bootstrap_form'
 
