@@ -1,6 +1,7 @@
 module Private::ConversationsHelper
   require_relative '../shared/conversations_helper'
   include Shared::ConversationsHelper
+  include Group::MessagesHelper
 
   # get the opposite user of the conversation
   def private_conv_recipient(conversation)
