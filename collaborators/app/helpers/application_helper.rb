@@ -5,6 +5,7 @@ module ApplicationHelper
   include PostsHelper
   include Private::MessagesHelper
   include Private::ConversationsHelper
+  include Group::ConversationsHelper
 
   def private_conversations_windows
     params[:controller] != 'messengers' ? @private_conversations_windows : []
