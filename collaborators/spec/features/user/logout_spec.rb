@@ -9,6 +9,7 @@ RSpec.feature "Logout", :type => :feature do
     find('nav #user-settings').click
     # For the dropdown link:
     find('.dropdown-menu', text: 'Log out').click
+    find('.mobile-menu', text: 'Log out').click
 
     # For the mobile link:
     find('.mobile-menu a', text: 'Log out').click
