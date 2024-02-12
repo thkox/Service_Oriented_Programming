@@ -10,4 +10,12 @@ module ApplicationHelper
   def private_conversations_windows
     params[:controller] != 'messengers' ? @private_conversations_windows : []
   end
+
+  def private_conversations_windows
+    params[:controller] != 'messengers' ? @private_conversations_windows : []
+  end
+  
+  def group_conversations_windows
+    params[:controller] != 'messengers' ? @group_conversations_windows : []
+  end
 end
